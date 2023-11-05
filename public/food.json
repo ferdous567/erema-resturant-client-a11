@@ -1,0 +1,162 @@
+[
+    {
+        "name": "Spicy Chicken Pizza",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSi_VKtG0Fn3LC7WIUlA0JRT_ivm4oKT-H88g&usqp=CAU",
+        "category": "Pizza",
+        "price": 15.99,
+        "quantity": 10,
+        "short-description": "A spicy pizza with chicken, jalapenos, and onions."
+    },
+    {
+        "name": "Veggie Burger",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3laVKSONqEF1F8qemirIqbOYRzG4ChFCBvA&usqp=CAU",
+        "category": "Burger",
+        "price": 8.99,
+        "quantity": 11,
+        "short-description": "A vegetarian burger with lettuce, tomato, and avocado."
+    },
+    {
+        "name": "Beef Tacos",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjXPVNTHSIvk9a6TBjUv-7wK-PqP-ZJO6h8w&usqp=CAU",
+        "category": "Tacos",
+        "price": 12.99,
+        "quantity": 13,
+        "short-description": "Three beef tacos with cheese, lettuce, and salsa."
+    },
+    {
+        "name": "Pesto Pasta",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX-s1cC0MfKf9Ifqpt09vQ4uTih5WPVaof5g&usqp=CAU",
+        "category": "Pasta",
+        "price": 11.99,
+        "quantity": "12",
+        "short-description": "Pasta with pesto sauce, cherry tomatoes, and parmesan cheese."
+    },
+    {
+        "name": "Grilled Cheese Sandwich",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkoEnTL0-KyCd5dDufYOlaUp5KdN4_pIkVGQ&usqp=CAU",
+        "category": "Sandwich",
+        "price": 6.99,
+        "quantity": 6,
+        "short-description": "A classic grilled cheese sandwich with cheddar cheese."
+    },
+    {
+        "name": "Chicken Caesar Salad",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRocxTR4UiDzSyuWJDgFDWkp-giP15wj_VEwQ&usqp=CAU",
+        "category": "Salad",
+        "price": 9.99,
+        "quantity": 8,
+        "short-description": "A salad with grilled chicken, romaine lettuce, and croutons."
+    },
+    {
+        "name": "Sushi Roll",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsdrw_YhTovJprqVdTm9fb9zBYyzVoEt_chw&usqp=CAU",
+        "category": "Sushi",
+        "price": 14.99,
+        "quantity": 9,
+        "short-description": "A sushi roll with salmon, avocado, and cucumber."
+    },
+    {
+        "name": "Fried Rice",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQLXLkHjQ3lF9CLo6gOnwY92imvUJj_6lBXA&usqp=CAU",
+        "category": "Rice",
+        "price": 10.99,
+        "quantity": 50,
+        "short-description": "Fried rice with chicken, egg, and vegetables."
+    },
+    {
+        "name": "Fish and Chips",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQaEaYDjvmMP2U67eKRl7wC48uXRJvPDjpEw&usqp=CAU",
+        "category": "Fish",
+        "price": 13.99,
+        "quantity": 14,
+        "short-description": "Fish and chips with tartar sauce and lemon wedges."
+    },
+    {
+        "name": "Chocolate Cake",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyG4xODPtYknxh-CzSMQLTor43biAdL8HTjA&usqp=CAU",
+        "category": "Dessert",
+        "price": 7.99,
+        "quantity": 25,
+        "short-description": "A slice of chocolate cake with whipped cream and strawberries."
+    },
+    {
+        "name": "Margherita Pizza",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZZR29HhHCRDi8xolWCo4NVDikBXLEh2pNTwQfsdCHa9eMomQqBKj14A2_E2LzY3F0SIo&usqp=CAU",
+        "category": "Pizza",
+        "price": 12.99,
+        "quantity": 41,
+        "short-description": "A classic pizza with tomato sauce, mozzarella cheese, and basil."
+    },
+    {
+        "name": "Cheeseburger",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRdjOrOFOL1YXvgFrBNuwzos8tjv-mmx8N3Q&usqp=CAU",
+        "category": "Burger",
+        "price": 7.99,
+        "quantity": 30,
+        "short-description": "A burger with beef patty, cheddar cheese, lettuce, and tomato."
+    },
+    {
+        "name": "Fish Tacos",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdAhBD2B5nEsz3js6Ca272cjh_YJRPSTKeQQ&usqp=CAU",
+        "category": "Tacos",
+        "price": 10.99,
+        "quantity": 35,
+        "short-description": "Three fish tacos with cabbage slaw and chipotle mayo."
+    },
+    {
+        "name": "Alfredo Pasta",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGumgAvjgtYECLFNHGrscBKvW5o4vyz2eeAQ&usqp=CAU",
+        "category": "Pasta",
+        "price": 13.99,
+        "quantity": 19,
+        "short-description": "Pasta with alfredo sauce, chicken, and broccoli."
+    },
+    {
+        "name": "BLT Sandwich",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSJVkVtFImMGY8xNGuWfwJ9x1nyuuofXpTIA&usqp=CAU",
+        "category": "Sandwich",
+        "price": 5.99,
+        "quantity": 20,
+        "short-description": "A sandwich with bacon, lettuce, tomato, and mayo."
+    },
+    {
+        "name": "Greek Salad",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVi4QerLNeCdjrpN9mA37V2qdN9KlBvuFe6g&usqp=CAU",
+        "category": "Salad",
+        "price": 8.99,
+        "quantity": 25,
+        "short-description": "A salad with feta cheese, olives, and cucumber."
+    },
+    {
+        "name": "California Roll",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzMxxsfBy93sj1ytQae-Lfhc1TqpmNCHknMw&usqp=CAU",
+        "category": "Sushi",
+        "price": 11.99,
+        "quantity": 33,
+        "short-description": "A sushi roll with crab meat, avocado, and cucumber."
+    },
+    {
+        "name": "Fried Noodles",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgXFqQyciY3Vd1MtY3Sdgol9ePyp3G8_WxGQ&usqp=CAU",
+        "category": "Rice",
+        "price": 9.99,
+        "quantity": 22,
+        "short-description": "Fried noodles with beef, egg, and vegetables."
+    },
+    {
+        "name": "Clam Chowder",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRu2846DswV-6ZbZdn1ADuKIoDkJUR4cVD2GQ&usqp=CAU",
+        "category": "Soup",
+        "price": 6.99,
+        "quantity": 20,
+        "short-description": "A creamy soup with clams and potatoes."
+    },
+    {
+        "name": "Apple Pie",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMPmjmPvO-MO6gKbz0Mw2fmQs2dbext-nhMA&usqp=CAU",
+        "category": "Dessert",
+        "price": 6.99,
+        "quantity": 50,
+        "short-description": "A slice of apple pie with vanilla ice cream."
+    }
+]
