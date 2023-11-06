@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 
 import Slider from "react-slick";
 import { Component } from "react";
+import { Link } from "react-router-dom";
 
 export default class SimpleSlider extends Component {
     render() {
@@ -38,7 +39,9 @@ export default class SimpleSlider extends Component {
                                 we are always with you to a hospitality.
                             </p>
                             <div>
+                            <Link to='/allfood'>
                             <button className="btn btn-outline btn-error font-bold">All Menu</button>
+                            </Link>
                             </div>
                         </div>
                         <motion.div
@@ -66,7 +69,9 @@ export default class SimpleSlider extends Component {
                                 we are always with you to a hospitality.
                             </p>
                             <div>
+                            <Link to='/allfood'>
                             <button className="btn btn-outline btn-error font-bold">All Menu</button>
+                            </Link>
                             </div>
                         </div>
                         </div>
@@ -84,7 +89,9 @@ export default class SimpleSlider extends Component {
                                 we are always with you to a hospitality.
                             </p>
                             <div>
+                            <Link to='/allfood'>
                             <button className="btn btn-outline btn-error font-bold">All Menu</button>
+                            </Link>
                             </div>
                         </div>
                         </div>
@@ -102,7 +109,9 @@ export default class SimpleSlider extends Component {
                                 we are always with you to a hospitality.
                             </p>
                             <div>
+                            <Link to='/allfood'>
                             <button className="btn btn-outline btn-error font-bold">All Menu</button>
+                            </Link>
                             </div>
                         </div>
                         </div>
@@ -120,7 +129,9 @@ export default class SimpleSlider extends Component {
                                 we are always with you to a hospitality.
                             </p>
                             <div>
+                            <Link to='/allfood'>
                             <button className="btn btn-outline btn-error font-bold">All Menu</button>
+                            </Link>
                             </div>
                         </div>
                         </div>
@@ -138,7 +149,9 @@ export default class SimpleSlider extends Component {
                                 we are always with you to a hospitality.
                             </p>
                             <div>
+                            <Link to='/allfood'>
                             <button className="btn btn-outline btn-error font-bold">All Menu</button>
+                            </Link>
                             </div>
                         </div>
                         </div>

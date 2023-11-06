@@ -30,10 +30,10 @@ const Navbar = () => {
                             </div>
                         </label>
                         <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-xl dropdown-content bg-base-100 rounded-box w-62">
-                            <li className="p-2">{user.displayName}</li>
+                        <Link to = '/dashboard'><li className="p-2 hover:text-blue-600 font-bold hover:underline">See Your Profile</li></Link>
                             <li className="p-2">{user.email}</li>
 
-                            <button onClick={handleLogout} className="btn btn-outline btn-success w-full">Log Out</button>
+                            <button onClick={handleLogout} className="btn btn-outline btn-sm btn-success w-full">Log Out</button>
 
                         </ul>
                     </div>
@@ -53,7 +53,7 @@ const Navbar = () => {
                     <p>+132 145 6987, info@erema.com</p>
                     <p>Monday - Sunday: 8 AM - 9 PM</p>
                 </div>
-                <img className="h-[150px] w-[180px]" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXgZF6F3PDNl4-i26PWrlHEBIvs_FZCWboeg&usqp=CAU" alt="" />
+                <img className="h-[120px] w-[150px]" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXgZF6F3PDNl4-i26PWrlHEBIvs_FZCWboeg&usqp=CAU" alt="" />
                 <div className='flex  gap-4 '>
                     <div className='border-2 border-red-600 rounded-full p-2 cursor-pointer hover:scale-125'>
                         <FaFacebookF></FaFacebookF>
@@ -111,7 +111,7 @@ const Navbar = () => {
                                                 </div>
                                             </label>
                                             <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-xl dropdown-content bg-base-100 rounded-box w-62">
-                                                <li className="p-2">{user.displayName}</li>
+                                                <Link to = '/dashboard'><li className="p-2">See Your Profile</li></Link>
                                                 <li className="p-2">{user.email}</li>
 
                                                 <button onClick={handleLogout} className="btn btn-outline btn-success w-full">Log Out</button>

@@ -6,11 +6,18 @@ import Blog from "../pages/blog/Blog";
 import Login from "../pages/login/Login";
 import Register from "../pages/register/Register";
 import FoodDetails from "../pages/allFood/FoodDetails";
+import ErrorPage from "../pages/error/ErrorPage";
+import PrivateRoute from "./PrivateRoute";
+import Dashboard from "../pages/profilePage/Dashboard";
+import AddItem from "../pages/profilePage/AddItem";
+import AllAddedItems from "../pages/profilePage/AllAddedItems";
+import AllOrderedItem from "../pages/profilePage/AllOrderedItem";
 
 const router = createBrowserRouter([
     {
       path: "/",
       element: <MainLayout></MainLayout>,
+      errorElement:<ErrorPage></ErrorPage>,
       children: [
         {
             path: '/',
@@ -19,15 +26,19 @@ const router = createBrowserRouter([
         {
           path: '/allfood',
           element:<AllFood></AllFood>,
-          loader: () => fetch('http://localhost:5000/allfood')
+          // loader: (currentPage, itemPerPage) => fetch(`http://localhost:5000/allfood?page=${currentPage}&size=${itemPerPage}`)
         },
         {
           path: '/blog',
-          element: <Blog></Blog>
+          element: <PrivateRoute>
+            <Blog></Blog>
+          </PrivateRoute>
         },
         {
           path: '/allfood/:id',
-          element: <FoodDetails></FoodDetails>,
+          element: <PrivateRoute>
+            <FoodDetails></FoodDetails>
+          </PrivateRoute>,
           loader: ({params}) => fetch(`http://localhost:5000/allfood/${params.id}`)
         }
       ]
@@ -39,6 +50,24 @@ const router = createBrowserRouter([
     {
       path: '/register',
       element: <Register></Register>
+    },
+    {
+      path: '/dashboard',
+      element: <Dashboard></Dashboard>,
+      children:[
+        {
+          path: '/dashboard/additem',
+          element: <AddItem></AddItem>
+        },
+        {
+          path: '/dashboard/allAddedItems',
+          element: <AllAddedItems></AllAddedItems>
+        },
+        {
+          path: '/dashboard/allOrderedItems',
+          element:<AllOrderedItem></AllOrderedItem>
+        }
+      ]
     }
     
   ]);

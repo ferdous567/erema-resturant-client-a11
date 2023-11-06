@@ -1,9 +1,13 @@
 import { useContext, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
 import Swal from "sweetalert2";
 
 const Login = () => {
+
+    const location = useLocation();
+    console.log('location in the login page',location);
+
 
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
@@ -36,7 +40,7 @@ const Login = () => {
                     timer: 1500
                 })
             )
-            navigate('/')
+            navigate(location?.state ? location?.state : '/')
         })
         .catch(error => {
             console.log(error)
