@@ -39,14 +39,14 @@ const Order = () => {
                 Swal.fire({
                     position: 'top-end',
                     icon: 'success',
-                    title: 'Successfully logged in!',
+                    title: 'Order is Received !',
                     showConfirmButton: false,
                     timer: 1500
                 })
             }
         })
 
-        form.reset();
+       
 
     }
 

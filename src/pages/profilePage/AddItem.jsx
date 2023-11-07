@@ -17,9 +17,9 @@ const AddItem = () => {
         const desc = form.desc.value;
         const email = form.email.value;
 
-        const addFoodDetails = {name, photo, category, price, quantity, origin, desc, email};
+        const addNewFood = {name, photo, category, price, quantity, origin, desc, email};
 
-        console.log(addFoodDetails)
+        console.log(addNewFood);
 
     }
 
