@@ -104,14 +104,15 @@ const Navbar = () => {
                             <li>
                                 {
                                     user ? <div>
-                                        <div className="dropdown dropdown-end">
+                                        <div className="dropdown md:dropdown-end">
                                             <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                                                 <div className="w-10 rounded-full">
                                                     <img src={user.photoURL} />
                                                 </div>
                                             </label>
                                             <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-xl dropdown-content bg-base-100 rounded-box w-62">
-                                                <Link to = '/dashboard'><li className="p-2">See Your Profile</li></Link>
+                                                <Link to = '/dashboard'><li className="p-2 
+                                                hover:text-blue-600 font-bold hover:underline">See Your Profile</li></Link>
                                                 <li className="p-2">{user.email}</li>
 
                                                 <button onClick={handleLogout} className="btn btn-outline btn-success w-full">Log Out</button>

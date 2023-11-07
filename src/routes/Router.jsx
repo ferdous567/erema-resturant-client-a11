@@ -45,6 +45,7 @@ const router = createBrowserRouter([
         {
           path: '/order',
           element: <Order></Order>
+          
         }
       ]
     },
@@ -70,7 +71,8 @@ const router = createBrowserRouter([
         },
         {
           path: '/dashboard/allOrderedItems',
-          element:<AllOrderedItem></AllOrderedItem>
+          element:<AllOrderedItem></AllOrderedItem>,
+          loader: () => fetch('http://localhost:5000/order')
         }
       ]
     }

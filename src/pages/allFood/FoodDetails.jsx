@@ -16,8 +16,8 @@ const FoodDetails = () => {
                     <p className="text-xl font-bold">Price: $ {food.price}</p>
                     <p className="text-xl font-bold">Available Quantity: {food.quantity}</p>
                     <p className="text-lg font-semibold">{food.short_description}</p>
-                    <Link to = '/order'>
-                    <button className="btn btn-outline btn-secondary"> Order Now</button>
+                    <Link to = '/order' >
+                    <button  className="btn btn-outline btn-secondary"> Order Now</button>
                     </Link>
                 </div>
             </div>

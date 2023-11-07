@@ -1,7 +1,10 @@
 import { useContext } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
+import Swal from "sweetalert2";
 
 const Order = () => {
+
+    
 
     const {user} = useContext(AuthContext);
 
@@ -20,6 +23,30 @@ const Order = () => {
         const orderFoodDetails = {name, date, category, price, quantity, buyerName, desc, email};
 
         console.log(orderFoodDetails);
+
+        // send data to database
+        fetch('http://localhost:5000/order',{
+            method: 'POST',
+            headers:{
+                'content-type': 'application/json',
+            },
+            body: JSON.stringify(orderFoodDetails)
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+            if(data.insertedId){
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'Successfully logged in!',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+            }
+        })
+
+        form.reset();
 
     }
 
@@ -53,7 +80,7 @@ const Order = () => {
                         </label>
                         <label className="input-group">
 
-                            <input type="text" name="quantity" placeholder="Quantity" className="input input-bordered" />
+                            <input type="number" name="quantity" placeholder="Quantity" className="input input-bordered" />
                         </label>
                     </div>
                 </div>
@@ -64,7 +91,7 @@ const Order = () => {
                         </label>
                         <label className="input-group">
 
-                            <input type="number" name="price" placeholder="Price" className="input input-bordered" />
+                            <input type="text" name="price" placeholder="Price" className="input input-bordered" />
                         </label>
                     </div>
                     <div className="form-control">

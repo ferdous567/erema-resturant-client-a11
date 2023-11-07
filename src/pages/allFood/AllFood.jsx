@@ -58,20 +58,7 @@ const AllFood = () => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-9/12 mx-auto pb-10">
-                {/* {
-                    
-                        allFoods.filter((food) => {
-                            if(search == ''){
-                                return food;
-                            }
-                            else if(food.name.toLowerCase().includes(search.toLowerCase())){
-                                return food;
-                            }
-                            
-                        })
-                    
-                    .map(food => <Food key={food._id} food={food}></Food>)
-                } */}
+                
                 {
                     filterFoods.map(food => <Food key={food._id} food={food}></Food>)
                 }
