@@ -20,7 +20,8 @@ const Dashboard = () => {
             <div className="bg-slate-300 w-1/3 p-10 border-2">
             <Link to = '/dashboard/additem'><button className="btn w-full mb-5">Add Food Items</button></Link>
             <Link to = '/dashboard/allAddedItems'><button className="btn w-full mb-5">All added items</button></Link>
-            <Link to = '/dashboard/allOrderedItems'><button className="btn w-full">My Ordered Items</button></Link>
+            <Link to = '/dashboard/allOrderedItems'><button className="btn w-full mb-5">My Ordered Items</button></Link>
+            <Link to = '/'><button className="btn w-full">Go To Home Page</button></Link>
             </div>
             <div className="bg-slate-200 w-2/3 border-2 p-5">
                 <h2 className="text-xl font-bold">Email: {user.email}</h2>

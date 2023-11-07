@@ -12,6 +12,7 @@ import Dashboard from "../pages/profilePage/Dashboard";
 import AddItem from "../pages/profilePage/AddItem";
 import AllAddedItems from "../pages/profilePage/AllAddedItems";
 import AllOrderedItem from "../pages/profilePage/AllOrderedItem";
+import Order from "../pages/Order/Order";
 
 const router = createBrowserRouter([
     {
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
             <FoodDetails></FoodDetails>
           </PrivateRoute>,
           loader: ({params}) => fetch(`http://localhost:5000/allfood/${params.id}`)
+        },
+        {
+          path: '/order',
+          element: <Order></Order>
         }
       ]
     },

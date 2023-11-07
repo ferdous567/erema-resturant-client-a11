@@ -1,11 +1,11 @@
 import { useContext } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
 
-const AddItem = () => {
+const UpdatePage = () => {
 
     const {user} = useContext(AuthContext);
 
-    const handleAddFood = e =>{
+    const handleUpdateFood = e =>{
         e.preventDefault();
         const form = e.target;
         const name = form.name.value;
@@ -17,16 +17,15 @@ const AddItem = () => {
         const desc = form.desc.value;
         const email = form.email.value;
 
-        const addFoodDetails = {name, photo, category, price, quantity, origin, desc, email};
+        const updateFoodDetails = {name, photo, category, price, quantity, origin, desc, email};
 
-        console.log(addFoodDetails)
+        console.log(updateFoodDetails)
 
     }
-
     return (
         <div>
-            <h3 className="text-2xl font-bold text-center underline py-4">Add New Food Item</h3>
-            <form onSubmit={handleAddFood} className="w-full">
+            <h3 className="text-2xl font-bold text-center underline py-4">Update Food Item</h3>
+            <form onSubmit={handleUpdateFood} className="w-full">
             <div className="flex justify-around">
                 <div className="form-control">
                     <label className="label">
@@ -116,4 +115,4 @@ const AddItem = () => {
     );
 };
 
-export default AddItem;
+export default UpdatePage;
