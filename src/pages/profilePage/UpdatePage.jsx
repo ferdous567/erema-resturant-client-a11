@@ -27,7 +27,7 @@ const UpdatePage = () => {
 
         console.log(updateFoodItems)
 
-        fetch(`https://resturant-mgmt-server.vercel.app/dashboard/additem/${_id}`,{
+        fetch(`https://resturant-mgmt-server.vercel.app/additem/${_id}`,{
             method: 'PUT',
             headers:{
                 'content-type' : 'application/json'

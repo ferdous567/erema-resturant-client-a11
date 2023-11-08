@@ -2,7 +2,7 @@ import { createContext, useEffect, useState } from "react";
 import app from "../firebase/firebase.config";
 import { GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, 
     onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
-import axios from "axios";
+// import axios from "axios";
 
 const auth = getAuth(app);
 
@@ -38,27 +38,27 @@ const AuthProvider = ({ children }) => {
       const unsubscribe =  onAuthStateChanged(auth, currentUser => {
             console.log('Current user is', currentUser);
 
-            const userEmail = currentUser?.email || user?.email;
-            const loggedUser = {email: userEmail};
+            // const userEmail = currentUser?.email || user?.email;
+            // const loggedUser = {email: userEmail};
 
             setUser(currentUser);
             setLoading(false);
 
-            if(currentUser){
+            // if(currentUser){
                 
-                axios.post('https://resturant-mgmt-server.vercel.app/jwt', loggedUser, {withCredentials: true})
-                .then(res => {
-                    console.log('token response', res.data)
-                })
-            }
-            else{
-                axios.post('https://resturant-mgmt-server.vercel.app/logout', loggedUser, {
-                    withCredentials: true
-                })
-                .then(res => {
-                    console.log(res.data)
-                })
-            }
+            //     axios.post('https://resturant-mgmt-server.vercel.app/jwt', loggedUser, {withCredentials: true})
+            //     .then(res => {
+            //         console.log('token response', res.data)
+            //     })
+            // }
+            // else{
+            //     axios.post('https://resturant-mgmt-server.vercel.app/logout', loggedUser, {
+            //         withCredentials: true
+            //     })
+            //     .then(res => {
+            //         console.log(res.data)
+            //     })
+            // }
         })
         return () =>{
             return unsubscribe();

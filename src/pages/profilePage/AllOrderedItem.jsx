@@ -12,7 +12,7 @@ const AllOrderedItem = () => {
     const [allOrderedFood, setallOrderedFood] = useState([]);
 
     useEffect(() =>{
-        fetch(`https://resturant-mgmt-server.vercel.app/order?email=${user?.email}`, {credentials: 'include'})
+        fetch(`https://resturant-mgmt-server.vercel.app/order?email=${user?.email}`)
         .then(res => res.json())
         .then(data => setallOrderedFood(data))
     },[user])
