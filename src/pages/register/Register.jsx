@@ -3,7 +3,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
 import { updateProfile } from "firebase/auth";
 import Swal from "sweetalert2";
-
+import {Helmet} from "react-helmet";
+          
 const Register = () => {
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
@@ -86,6 +87,10 @@ const Register = () => {
 
     return (
         <div className="relative ">
+           
+            <Helmet>
+                <title>Register</title>
+            </Helmet>
             <img className="h-full  w-full opacity-70" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV6-DQF2pBwNFV9KzPafu9RghrNF1tZ8J3AA&usqp=CAU" alt="" />
 
             <div className="absolute top-16 left-20 w-3/4 md:w-1/3  border box-border

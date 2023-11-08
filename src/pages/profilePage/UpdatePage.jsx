@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
-
+import {Helmet} from "react-helmet";
 const UpdatePage = () => {
 
     const updateFood = useLoaderData();
@@ -53,6 +53,10 @@ const UpdatePage = () => {
     
     return (
         <div>
+            
+            <Helmet>
+                <title>Update</title>
+            </Helmet>
             <h3 className="text-2xl font-bold text-center underline py-4">Update Food Item is: {name}</h3>
             <form onSubmit={handleUpdateFood} className="w-full">
             <div className="flex justify-around">

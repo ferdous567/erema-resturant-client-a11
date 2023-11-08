@@ -2,7 +2,8 @@
 import SingleNav from "../../shared/navbar/SingleNav";
 import Food from "./Food";
 import { useEffect, useState } from "react";
-
+import {Helmet} from "react-helmet";
+          
 const AllFood = () => {
     const [search, setSearch] = useState('');
     const [singlePage, setSinglePage] = useState('');
@@ -48,6 +49,10 @@ const AllFood = () => {
 
     return (
         <div className=" w-full">
+            
+            <Helmet>
+                <title>AllFood</title>
+            </Helmet>
             <div className="bg-[url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_-0eR243ynqpWGHX0uPSbn7VJyOwll7kzrA&usqp=CAU')]
              bg-no-repeat bg-cover opacity-80">
             <SingleNav></SingleNav>

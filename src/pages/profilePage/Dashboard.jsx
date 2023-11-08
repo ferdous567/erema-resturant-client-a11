@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { Link, Outlet } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
 import ContentLoader from 'react-content-loader';
+import {Helmet} from "react-helmet";
 
 const Dashboard = () => {
 
@@ -18,6 +19,10 @@ const Dashboard = () => {
 
     return (
         <div>
+            
+            <Helmet>
+                <title>Dashboard</title>
+            </Helmet>
             <div>
                 <h2 className="text-3xl font-bold underline-offset-2 py-4 text-center
                 bg-gradient-to-r from-slate-300 via-slate-200 to-slate-300">Profiles of {user.displayName}</h2>

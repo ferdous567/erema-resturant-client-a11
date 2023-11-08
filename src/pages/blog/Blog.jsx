@@ -1,9 +1,14 @@
 import SingleNav from "../../shared/navbar/SingleNav";
-
+import {Helmet} from "react-helmet";
+            
 const Blog = () => {
     return (
         <div>
             <SingleNav></SingleNav>
+            
+            <Helmet>
+                <title>Blog</title>
+            </Helmet>
         <div className="w-full bg-gradient-to-r from-purple-200 md:from-red-200 md:to-pink-200">
             <h3 className="bg-gradient-to-r from-orange-400 to-yellow-400 h-[80px] w-full
             text-3xl font-bold text-center pt-3">Blog Page</h3>
