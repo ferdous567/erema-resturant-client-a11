@@ -1,4 +1,4 @@
-// import { useLoaderData } from "react-router-dom";
+
 import SingleNav from "../../shared/navbar/SingleNav";
 import Food from "./Food";
 import { useEffect, useState } from "react";
@@ -8,7 +8,6 @@ const AllFood = () => {
     const [search, setSearch] = useState('');
     const [singlePage, setSinglePage] = useState('');
     const [currentPage, setCurrentPage] = useState(0);
-    // const allFoods = useLoaderData();
     const [allFoods, setAllFoods] = useState({});
     const foodsArray = Object.values(allFoods);
     const filterFoods = foodsArray.filter(food => food.name.toLowerCase().includes(search.toLowerCase()))
