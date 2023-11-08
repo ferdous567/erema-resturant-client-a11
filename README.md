@@ -9,4 +9,6 @@
 * use vite for react
  
 
+ assignment_category_0005
+## Name: Erema Resturant (Resturant service management)
  ## live site link: https://resturant-mgmt-f8dee.web.app/
