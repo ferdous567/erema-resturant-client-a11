@@ -80,11 +80,11 @@ const Order = () => {
                     </div>
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text">Available Quantity</span>
+                            <span className="label-text">Order Quantity</span>
                         </label>
                         <label className="input-group">
 
-                            <input type="number" name="quantity" defaultValue={singleFood.quantity}
+                            <input type="number" name="quantity" 
                             placeholder="Quantity" className="input input-bordered" />
                         </label>
                     </div>

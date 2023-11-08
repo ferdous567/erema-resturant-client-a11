@@ -38,14 +38,16 @@ const router = createBrowserRouter([
         },
         {
           path: '/allfood/:id',
-          element: <PrivateRoute>
-            <FoodDetails></FoodDetails>
-          </PrivateRoute>,
+          element: 
+            <FoodDetails></FoodDetails>,
+          
           loader: ({params}) => fetch(`http://localhost:5000/allfood/${params.id}`)
         },
         {
           path: '/order/:id',
-          element: <Order></Order>,
+          element: <PrivateRoute>
+          <Order></Order>,
+          </PrivateRoute>,
           loader: ({params}) => fetch(`http://localhost:5000/allfood/${params.id}`)
           
         }
@@ -70,12 +72,12 @@ const router = createBrowserRouter([
         {
           path: '/dashboard/allAddedItems',
           element: <AllAddedItems></AllAddedItems>,
-          loader: ({params}) => fetch(`http://localhost:5000/additem?email=${params.user?.email}`)
+          // loader: ({params}) => fetch(`http://localhost:5000/additem?email=${params.user?.email}`)
         },
         {
           path: '/dashboard/allOrderedItems',
           element:<AllOrderedItem></AllOrderedItem>,
-          loader: () => fetch('http://localhost:5000/order')
+          // loader: () => fetch('http://localhost:5000/order')
         },
         {
           path: '/dashboard/updateItem/:id',

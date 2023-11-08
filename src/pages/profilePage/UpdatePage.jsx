@@ -7,7 +7,7 @@ const UpdatePage = () => {
 
     const updateFood = useLoaderData();
 
-    const {_id, name, photo, price, quantity, category, short_description, origin} = updateFood;
+    const {_id, name, photo, price, quantity, category, desc, origin} = updateFood;
 
     const {user} = useContext(AuthContext);
 
@@ -135,7 +135,7 @@ const UpdatePage = () => {
                     </label>
                     <label className="input-group">
                         
-                        <input type="text" name="desc" defaultValue={short_description}
+                        <input type="text" name="desc" defaultValue={desc}
                         placeholder="Short Desc.." className="input input-bordered w-full" />
                     </label>
                 </div>

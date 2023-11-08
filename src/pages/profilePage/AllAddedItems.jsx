@@ -1,9 +1,19 @@
-import { useLoaderData } from "react-router-dom";
+
 import SingleAddItem from "./SingleAddItem";
+import { useContext, useEffect, useState } from "react";
+import { AuthContext } from "../../provider/AuthProvider";
 
 const AllAddedItems = () => {
 
-    const addedItems = useLoaderData();
+    const { user } = useContext(AuthContext);
+
+    const [addedItems, setAddedItems] = useState([]);
+
+    useEffect(() =>{
+        fetch(`http://localhost:5000/additem?email=${user?.email}`)
+        .then(res => res.json())
+        .then(data => setAddedItems(data))
+    },[user])
 
     return (
         <div>

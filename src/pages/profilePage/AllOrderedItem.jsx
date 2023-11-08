@@ -1,12 +1,23 @@
-import {  useLoaderData } from "react-router-dom";
+// import {  useLoaderData } from "react-router-dom";
+import { AuthContext } from "../../provider/AuthProvider";
 import SingleOrder from "./SingleOrder";
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 const AllOrderedItem = () => {
 
-    const allOrderedFood = useLoaderData();
+    // const allOrderedFood = useLoaderData();
 
-    const [singleFoodItem, setSingleFoodItem] = useState(allOrderedFood);
+    const { user } = useContext(AuthContext);
+
+    const [allOrderedFood, setallOrderedFood] = useState([]);
+
+    useEffect(() =>{
+        fetch(`http://localhost:5000/order?email=${user?.email}`)
+        .then(res => res.json())
+        .then(data => setallOrderedFood(data))
+    },[user])
+
+    // const [singleFoodItem, setSingleFoodItem] = useState(allOrderedFood);
 
     return (
         <div>
@@ -28,11 +39,17 @@ const AllOrderedItem = () => {
 
                        
                             {
+                                allOrderedFood.map(singleFood => <SingleOrder singleFood={singleFood}
+                                    key={singleFood._id}
+                                    singleFoodItem={allOrderedFood}
+                                    setSingleFoodItem={setallOrderedFood}></SingleOrder>)
+                            }
+                            {/* {
                                 singleFoodItem.map(singleFood => <SingleOrder singleFood={singleFood}
                                     key={singleFood._id}
                                     singleFoodItem={singleFoodItem}
                                     setSingleFoodItem={setSingleFoodItem}></SingleOrder>)
-                            }
+                            } */}
                         
 
                     </tbody>
