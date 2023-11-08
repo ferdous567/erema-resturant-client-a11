@@ -27,7 +27,8 @@ const Order = () => {
         console.log(orderFoodDetails);
 
         // send data to database
-        fetch(`http://localhost:5000/order?productId=${singleFood?._id}&orders=${singleFood?.orders}`,{
+        fetch(`https://resturant-mgmt-server.vercel.app/order?productId=${singleFood?._id}&orders=${singleFood?.orders}`, 
+         {
             method: 'POST',
             headers:{
                 'content-type': 'application/json',
@@ -46,6 +47,7 @@ const Order = () => {
                     timer: 1500
                 })
             }
+            
         })
 
        

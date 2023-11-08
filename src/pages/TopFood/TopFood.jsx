@@ -8,10 +8,9 @@ const TopFood = () => {
 
     useEffect(() => {
         const loadFood = async () => {
-            const res = await fetch(`http://localhost:5000/top-selling`);
+            const res = await fetch('https://resturant-mgmt-server.vercel.app/top-selling', {credentials: 'include'});
             const result = await res.json();
-            setAllFoods(result)
-            console.log(result);
+            setAllFoods(result);
         };
         loadFood()
     })

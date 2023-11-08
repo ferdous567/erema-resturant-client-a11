@@ -28,7 +28,7 @@ const router = createBrowserRouter([
         {
           path: '/allfood',
           element:<AllFood></AllFood>,
-          // loader: (currentPage, itemPerPage) => fetch(`http://localhost:5000/allfood?page=${currentPage}&size=${itemPerPage}`)
+          // loader: (currentPage, itemPerPage) => fetch(`https://resturant-mgmt-server.vercel.app/allfood?page=${currentPage}&size=${itemPerPage}`)
         },
         {
           path: '/blog',
@@ -41,14 +41,14 @@ const router = createBrowserRouter([
           element: 
             <FoodDetails></FoodDetails>,
           
-          loader: ({params}) => fetch(`http://localhost:5000/allfood/${params.id}`)
+          loader: ({params}) => fetch(`https://resturant-mgmt-server.vercel.app/allfood/${params.id}`)
         },
         {
           path: '/order/:id',
           element: <PrivateRoute>
           <Order></Order>,
           </PrivateRoute>,
-          loader: ({params}) => fetch(`http://localhost:5000/allfood/${params.id}`)
+          loader: ({params}) => fetch(`https://resturant-mgmt-server.vercel.app/allfood/${params.id}`)
           
         }
       ]
@@ -72,17 +72,17 @@ const router = createBrowserRouter([
         {
           path: '/dashboard/allAddedItems',
           element: <AllAddedItems></AllAddedItems>,
-          // loader: ({params}) => fetch(`http://localhost:5000/additem?email=${params.user?.email}`)
+          // loader: ({params}) => fetch(`https://resturant-mgmt-server.vercel.app/additem?email=${params.user?.email}`)
         },
         {
           path: '/dashboard/allOrderedItems',
           element:<AllOrderedItem></AllOrderedItem>,
-          // loader: () => fetch('http://localhost:5000/order')
+          // loader: () => fetch('https://resturant-mgmt-server.vercel.app/order')
         },
         {
           path: '/dashboard/updateItem/:id',
           element: <UpdatePage></UpdatePage>,
-          loader: ({params}) => fetch(`http://localhost:5000/additem/${params.id}`)
+          loader: ({params}) => fetch(`https://resturant-mgmt-server.vercel.app/additem/${params.id}`)
         }
       ]
     }

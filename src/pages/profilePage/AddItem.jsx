@@ -22,7 +22,7 @@ const AddItem = () => {
 
         console.log(addNewFood);
 
-        fetch('http://localhost:5000/additem',{
+        fetch('https://resturant-mgmt-server.vercel.app/additem',{
             method: 'POST',
             headers:{
                 'content-type' : 'application/json'

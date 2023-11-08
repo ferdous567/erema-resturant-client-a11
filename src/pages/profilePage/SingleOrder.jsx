@@ -24,7 +24,7 @@ const SingleOrder = ({ singleFood, singleFoodItem, setSingleFoodItem }) => {
             if (result.isConfirmed) {
 
 
-                fetch(`http://localhost:5000/order/${_id}`, {
+                fetch(`https://resturant-mgmt-server.vercel.app/order/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

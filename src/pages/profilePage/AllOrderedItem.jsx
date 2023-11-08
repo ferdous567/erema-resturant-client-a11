@@ -12,7 +12,7 @@ const AllOrderedItem = () => {
     const [allOrderedFood, setallOrderedFood] = useState([]);
 
     useEffect(() =>{
-        fetch(`http://localhost:5000/order?email=${user?.email}`)
+        fetch(`https://resturant-mgmt-server.vercel.app/order?email=${user?.email}`, {credentials: 'include'})
         .then(res => res.json())
         .then(data => setallOrderedFood(data))
     },[user])
@@ -32,7 +32,7 @@ const AllOrderedItem = () => {
                             <th>Ordered Date</th>
                             <th>Price</th>
                             <th>Quantity</th>
-                            <html></html>
+                            {/* <html></html> */}
                         </tr>
                     </thead>
                     <tbody>
@@ -44,12 +44,7 @@ const AllOrderedItem = () => {
                                     singleFoodItem={allOrderedFood}
                                     setSingleFoodItem={setallOrderedFood}></SingleOrder>)
                             }
-                            {/* {
-                                singleFoodItem.map(singleFood => <SingleOrder singleFood={singleFood}
-                                    key={singleFood._id}
-                                    singleFoodItem={singleFoodItem}
-                                    setSingleFoodItem={setSingleFoodItem}></SingleOrder>)
-                            } */}
+                            
                         
 
                     </tbody>

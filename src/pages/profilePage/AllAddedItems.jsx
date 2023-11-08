@@ -10,7 +10,7 @@ const AllAddedItems = () => {
     const [addedItems, setAddedItems] = useState([]);
 
     useEffect(() =>{
-        fetch(`http://localhost:5000/additem?email=${user?.email}`)
+        fetch(`https://resturant-mgmt-server.vercel.app/additem?email=${user?.email}`)
         .then(res => res.json())
         .then(data => setAddedItems(data))
     },[user])

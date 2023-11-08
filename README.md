@@ -1,8 +1,12 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Add feature
+* Use Firebase for client side
+* use mongo db for backend
+* for css framework use tailwind and daisyUI
+* use react for javascript liberary
+* use sweet alert
+* use framer motion
+* use vite for react
+ 
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+ ## live site link: https://resturant-mgmt-f8dee.web.app/
