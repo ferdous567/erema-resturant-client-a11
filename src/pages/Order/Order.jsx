@@ -1,10 +1,12 @@
 import { useContext } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
 import Swal from "sweetalert2";
+import { useLoaderData } from "react-router-dom";
+import SingleNav from "../../shared/navbar/SingleNav";
 
 const Order = () => {
 
-    
+    const singleFood = useLoaderData();
 
     const {user} = useContext(AuthContext);
 
@@ -25,7 +27,7 @@ const Order = () => {
         console.log(orderFoodDetails);
 
         // send data to database
-        fetch('http://localhost:5000/order',{
+        fetch(`http://localhost:5000/order?productId=${singleFood?._id}&orders=${singleFood?.orders}`,{
             method: 'POST',
             headers:{
                 'content-type': 'application/json',
@@ -51,7 +53,9 @@ const Order = () => {
     }
 
     return (
-        <form onSubmit={handlePurchaseFood} className="bg-[#f4f3f0] p-6 h-screen m-5">
+        <div>
+            <SingleNav></SingleNav>
+            <form onSubmit={handlePurchaseFood} className="bg-[#f4f3f0] p-6 h-screen m-5">
             <h3 className="text-2xl font-bold text-center underline py-4">Purchase Page</h3>
             <div className="w-full">
                 <div className="flex justify-around">
@@ -61,7 +65,7 @@ const Order = () => {
                         </label>
                         <label className="input-group">
 
-                            <input type="text" defaultValue={name}
+                            <input type="text" defaultValue={singleFood.name}
                             name="name" placeholder="Name" className="input input-bordered" />
                         </label>
                     </div>
@@ -71,7 +75,7 @@ const Order = () => {
                         </label>
                         <label className="input-group">
 
-                            <input type="text" name="category" placeholder="Category" className="input input-bordered" />
+                            <input type="text" name="category" defaultValue={singleFood.category} placeholder="Category" className="input input-bordered" />
                         </label>
                     </div>
                     <div className="form-control">
@@ -80,7 +84,8 @@ const Order = () => {
                         </label>
                         <label className="input-group">
 
-                            <input type="number" name="quantity" placeholder="Quantity" className="input input-bordered" />
+                            <input type="number" name="quantity" defaultValue={singleFood.quantity}
+                            placeholder="Quantity" className="input input-bordered" />
                         </label>
                     </div>
                 </div>
@@ -91,7 +96,8 @@ const Order = () => {
                         </label>
                         <label className="input-group">
 
-                            <input type="text" name="price" placeholder="Price" className="input input-bordered" />
+                            <input type="text" name="price" defaultValue={singleFood.price}
+                             placeholder="Price" className="input input-bordered" />
                         </label>
                     </div>
                     <div className="form-control">
@@ -122,7 +128,8 @@ const Order = () => {
                         </label>
                         <label className="input-group">
 
-                            <input type="date" name="date" placeholder="Buying Date" className="input input-bordered w-full" />
+                            <input type="date" name="date" 
+                            placeholder="Buying Date" className="input input-bordered w-full" />
                         </label>
                     </div>
                     <div className="form-control w-1/2">
@@ -131,7 +138,8 @@ const Order = () => {
                         </label>
                         <label className="input-group">
 
-                            <input type="text" name="desc" placeholder="Short Desc.." className="input input-bordered w-full" />
+                            <input type="text" name="desc" defaultValue={singleFood.desc}
+                            placeholder="Short Desc.." className="input input-bordered w-full" />
                         </label>
                     </div>
 
@@ -143,6 +151,7 @@ const Order = () => {
                 </div>
             </div>
         </form>
+        </div>
     );
 };
 

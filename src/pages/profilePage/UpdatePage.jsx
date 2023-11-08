@@ -1,7 +1,13 @@
 import { useContext } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
+import { useLoaderData } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const UpdatePage = () => {
+
+    const updateFood = useLoaderData();
+
+    const {_id, name, photo, price, quantity, category, short_description, origin} = updateFood;
 
     const {user} = useContext(AuthContext);
 
@@ -17,14 +23,37 @@ const UpdatePage = () => {
         const desc = form.desc.value;
         const email = form.email.value;
 
-        const updateFoodDetails = {name, photo, category, price, quantity, origin, desc, email};
+        const updateFoodItems = {name, photo, category, price, quantity, origin, desc, email};
 
-        console.log(updateFoodDetails)
+        console.log(updateFoodItems)
+
+        fetch(`http://localhost:5000/dashboard/additem/${_id}`,{
+            method: 'PUT',
+            headers:{
+                'content-type' : 'application/json'
+            },
+            body: JSON.stringify(updateFoodItems)
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data);
+            if(data.modifiedCount > 0){
+                Swal.fire({
+                    position: 'top-end',
+                    icon: 'success',
+                    title: 'Updated Successfully !',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
+            }
+        })
 
     }
+
+    
     return (
         <div>
-            <h3 className="text-2xl font-bold text-center underline py-4">Update Food Item</h3>
+            <h3 className="text-2xl font-bold text-center underline py-4">Update Food Item is: {name}</h3>
             <form onSubmit={handleUpdateFood} className="w-full">
             <div className="flex justify-around">
                 <div className="form-control">
@@ -33,7 +62,8 @@ const UpdatePage = () => {
                     </label>
                     <label className="input-group">
                         
-                        <input type="text" name="name" placeholder="Name" className="input input-bordered" />
+                        <input type="text" name="name" defaultValue={name}
+                        placeholder="Name" className="input input-bordered" />
                     </label>
                 </div>
                 <div className="form-control">
@@ -42,7 +72,8 @@ const UpdatePage = () => {
                     </label>
                     <label className="input-group">
                         
-                        <input type="text" name="category" placeholder="Category" className="input input-bordered" />
+                        <input type="text" name="category" defaultValue={category}
+                        placeholder="Category" className="input input-bordered" />
                     </label>
                 </div>
                 <div className="form-control">
@@ -51,7 +82,8 @@ const UpdatePage = () => {
                     </label>
                     <label className="input-group">
                         
-                        <input type="number" name="quantity" placeholder="Quantity" className="input input-bordered" />
+                        <input type="number" name="quantity" defaultValue={quantity}
+                        placeholder="Quantity" className="input input-bordered" />
                     </label>
                 </div>
             </div>
@@ -62,7 +94,8 @@ const UpdatePage = () => {
                     </label>
                     <label className="input-group">
                         
-                        <input type="text" name="price" placeholder="Price" className="input input-bordered" />
+                        <input type="text" name="price" defaultValue={price}
+                        placeholder="Price" className="input input-bordered" />
                     </label>
                 </div>
                 <div className="form-control">
@@ -80,7 +113,8 @@ const UpdatePage = () => {
                     </label>
                     <label className="input-group">
                         
-                        <input type="text" name="origin" placeholder="Country" className="input input-bordered" />
+                        <input type="text" name="origin" defaultValue={origin}
+                        placeholder="Country" className="input input-bordered" />
                     </label>
                 </div>
             </div>
@@ -91,7 +125,8 @@ const UpdatePage = () => {
                     </label>
                     <label className="input-group">
                         
-                        <input type="text" name="photo" placeholder="PhotoURL" className="input input-bordered w-full" />
+                        <input type="text" name="photo" defaultValue={photo}
+                        placeholder="PhotoURL" className="input input-bordered w-full" />
                     </label>
                 </div>
                 <div className="form-control w-1/2">
@@ -100,14 +135,15 @@ const UpdatePage = () => {
                     </label>
                     <label className="input-group">
                         
-                        <input type="text" name="desc" placeholder="Short Desc.." className="input input-bordered w-full" />
+                        <input type="text" name="desc" defaultValue={short_description}
+                        placeholder="Short Desc.." className="input input-bordered w-full" />
                     </label>
                 </div>
                 
             </div>
             <div className="my-8  text-center">
                    
-                        <input type="submit" value='Add Food' className="btn btn-ghost btn-outline" />
+                        <input type="submit" value='Update' className="btn btn-ghost btn-outline" />
                  
                 </div>
             </form>

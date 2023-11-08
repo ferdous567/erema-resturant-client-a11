@@ -1,9 +1,13 @@
+
 import Swal from "sweetalert2";
 
 
-const SingleOrder = ({ singleFood }) => {
+const SingleOrder = ({ singleFood, singleFoodItem, setSingleFoodItem }) => {
 
     const { _id, name, date, price, quantity } = singleFood;
+
+    
+
 
     const hanldeDelete = (_id) => {
         console.log(_id);
@@ -32,6 +36,9 @@ const SingleOrder = ({ singleFood }) => {
                                 text: "Items has been deleted.",
                                 icon: "success"
                             });
+
+                            const remaining = singleFoodItem.filter(food => food._id !== _id);
+                            setSingleFoodItem(remaining)
                         }
                     })
             }

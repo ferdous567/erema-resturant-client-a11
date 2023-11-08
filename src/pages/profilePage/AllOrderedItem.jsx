@@ -1,9 +1,12 @@
 import {  useLoaderData } from "react-router-dom";
 import SingleOrder from "./SingleOrder";
+import { useState } from "react";
 
 const AllOrderedItem = () => {
 
     const allOrderedFood = useLoaderData();
+
+    const [singleFoodItem, setSingleFoodItem] = useState(allOrderedFood);
 
     return (
         <div>
@@ -25,8 +28,10 @@ const AllOrderedItem = () => {
 
                        
                             {
-                                allOrderedFood.map(singleFood => <SingleOrder singleFood={singleFood}
-                                    key={singleFood._id}></SingleOrder>)
+                                singleFoodItem.map(singleFood => <SingleOrder singleFood={singleFood}
+                                    key={singleFood._id}
+                                    singleFoodItem={singleFoodItem}
+                                    setSingleFoodItem={setSingleFoodItem}></SingleOrder>)
                             }
                         
 

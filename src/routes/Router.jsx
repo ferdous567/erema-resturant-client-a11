@@ -13,6 +13,7 @@ import AddItem from "../pages/profilePage/AddItem";
 import AllAddedItems from "../pages/profilePage/AllAddedItems";
 import AllOrderedItem from "../pages/profilePage/AllOrderedItem";
 import Order from "../pages/Order/Order";
+import UpdatePage from "../pages/profilePage/UpdatePage";
 
 const router = createBrowserRouter([
     {
@@ -43,8 +44,9 @@ const router = createBrowserRouter([
           loader: ({params}) => fetch(`http://localhost:5000/allfood/${params.id}`)
         },
         {
-          path: '/order',
-          element: <Order></Order>
+          path: '/order/:id',
+          element: <Order></Order>,
+          loader: ({params}) => fetch(`http://localhost:5000/allfood/${params.id}`)
           
         }
       ]
@@ -67,12 +69,18 @@ const router = createBrowserRouter([
         },
         {
           path: '/dashboard/allAddedItems',
-          element: <AllAddedItems></AllAddedItems>
+          element: <AllAddedItems></AllAddedItems>,
+          loader: ({params}) => fetch(`http://localhost:5000/additem?email=${params.user?.email}`)
         },
         {
           path: '/dashboard/allOrderedItems',
           element:<AllOrderedItem></AllOrderedItem>,
           loader: () => fetch('http://localhost:5000/order')
+        },
+        {
+          path: '/dashboard/updateItem/:id',
+          element: <UpdatePage></UpdatePage>,
+          loader: ({params}) => fetch(`http://localhost:5000/additem/${params.id}`)
         }
       ]
     }

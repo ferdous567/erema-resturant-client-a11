@@ -19,7 +19,22 @@ const Register = () => {
         const photo = form.photo.value;
         const password = form.password.value;
 
-        console.log(email, password, name, photo);
+        const newUser = {email, password, name, photo}
+
+        console.log(newUser);
+
+        fetch('http://localhost:5000/user',{
+            method: 'POST',
+            headers:{
+                'content-type': 'application/json',
+            },
+            body: JSON.stringify(newUser)
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+           
+        })
 
         setError('');
         setSuccess('');

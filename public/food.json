@@ -5,7 +5,9 @@
         "category": "Pizza",
         "price": 15.99,
         "quantity": 10,
-        "short-description": "A spicy pizza with chicken, jalapenos, and onions."
+        "email":"khaledaferdous@gmail.com",
+        "origin":"USA",
+        "desc": "A spicy pizza with chicken, jalapenos, and onions."
     },
     {
         "name": "Veggie Burger",
@@ -13,7 +15,9 @@
         "category": "Burger",
         "price": 8.99,
         "quantity": 11,
-        "short-description": "A vegetarian burger with lettuce, tomato, and avocado."
+        "email":"khaledaferdous41@gmail.com",
+        "origin":"USA",
+        "desc": "A vegetarian burger with lettuce, tomato, and avocado."
     },
     {
         "name": "Beef Tacos",
@@ -21,7 +25,9 @@
         "category": "Tacos",
         "price": 12.99,
         "quantity": 13,
-        "short-description": "Three beef tacos with cheese, lettuce, and salsa."
+        "email":"khaledaferdous41@gmail.com",
+        "origin":"USA",
+        "desc": "Three beef tacos with cheese, lettuce, and salsa."
     },
     {
         "name": "Pesto Pasta",
@@ -29,7 +35,9 @@
         "category": "Pasta",
         "price": 11.99,
         "quantity": "12",
-        "short-description": "Pasta with pesto sauce, cherry tomatoes, and parmesan cheese."
+        "email":"papiaferdous43@gmail.com",
+        "origin":"USA",
+        "desc": "Pasta with pesto sauce, cherry tomatoes, and parmesan cheese."
     },
     {
         "name": "Grilled Cheese Sandwich",
@@ -37,7 +45,9 @@
         "category": "Sandwich",
         "price": 6.99,
         "quantity": 6,
-        "short-description": "A classic grilled cheese sandwich with cheddar cheese."
+        "email":"papiaferdous43@gmail.com",
+        "origin":"USA",
+        "desc": "A classic grilled cheese sandwich with cheddar cheese."
     },
     {
         "name": "Chicken Caesar Salad",
@@ -45,7 +55,9 @@
         "category": "Salad",
         "price": 9.99,
         "quantity": 8,
-        "short-description": "A salad with grilled chicken, romaine lettuce, and croutons."
+        "email":"khaledaferdous41@gmail.com",
+        "origin":"USA",
+        "desc": "A salad with grilled chicken, romaine lettuce, and croutons."
     },
     {
         "name": "Sushi Roll",
@@ -53,7 +65,9 @@
         "category": "Sushi",
         "price": 14.99,
         "quantity": 9,
-        "short-description": "A sushi roll with salmon, avocado, and cucumber."
+        "email":"khaledaferdous41@gmail.com",
+        "origin":"USA",
+        "desc": "A sushi roll with salmon, avocado, and cucumber."
     },
     {
         "name": "Fried Rice",
@@ -61,7 +75,9 @@
         "category": "Rice",
         "price": 10.99,
         "quantity": 50,
-        "short-description": "Fried rice with chicken, egg, and vegetables."
+        "email":"papiaferdous43@gmail.com",
+        "origin":"USA",
+        "desc": "Fried rice with chicken, egg, and vegetables."
     },
     {
         "name": "Fish and Chips",
@@ -69,7 +85,9 @@
         "category": "Fish",
         "price": 13.99,
         "quantity": 14,
-        "short-description": "Fish and chips with tartar sauce and lemon wedges."
+        "email":"papiaferdous43@gmail.com",
+        "origin":"USA",
+        "desc": "Fish and chips with tartar sauce and lemon wedges."
     },
     {
         "name": "Chocolate Cake",
@@ -77,7 +95,9 @@
         "category": "Dessert",
         "price": 7.99,
         "quantity": 25,
-        "short-description": "A slice of chocolate cake with whipped cream and strawberries."
+        "email":"papiaferdous43@gmail.com",
+        "origin":"USA",
+        "desc": "A slice of chocolate cake with whipped cream and strawberries."
     },
     {
         "name": "Margherita Pizza",
@@ -85,7 +105,9 @@
         "category": "Pizza",
         "price": 12.99,
         "quantity": 41,
-        "short-description": "A classic pizza with tomato sauce, mozzarella cheese, and basil."
+        "email":"papiaferdous43@gmail.com",
+        "origin":"USA",
+        "desc": "A classic pizza with tomato sauce, mozzarella cheese, and basil."
     },
     {
         "name": "Cheeseburger",
@@ -93,7 +115,9 @@
         "category": "Burger",
         "price": 7.99,
         "quantity": 30,
-        "short-description": "A burger with beef patty, cheddar cheese, lettuce, and tomato."
+        "email":"papiaferdous43@gmail.com",
+        "origin":"USA",
+        "desc": "A burger with beef patty, cheddar cheese, lettuce, and tomato."
     },
     {
         "name": "Fish Tacos",
@@ -101,7 +125,9 @@
         "category": "Tacos",
         "price": 10.99,
         "quantity": 35,
-        "short-description": "Three fish tacos with cabbage slaw and chipotle mayo."
+        "email":"khaledaferdous@gmail.com",
+        "origin":"USA",
+        "desc": "Three fish tacos with cabbage slaw and chipotle mayo."
     },
     {
         "name": "Alfredo Pasta",
@@ -109,7 +135,9 @@
         "category": "Pasta",
         "price": 13.99,
         "quantity": 19,
-        "short-description": "Pasta with alfredo sauce, chicken, and broccoli."
+        "email":"khaledaferdous41@gmail.com",
+        "origin":"USA",
+        "desc": "Pasta with alfredo sauce, chicken, and broccoli."
     },
     {
         "name": "BLT Sandwich",
@@ -117,7 +145,9 @@
         "category": "Sandwich",
         "price": 5.99,
         "quantity": 20,
-        "short-description": "A sandwich with bacon, lettuce, tomato, and mayo."
+        "email":"papiaferdous43@gmail.com",
+        "origin":"USA",
+        "desc": "A sandwich with bacon, lettuce, tomato, and mayo."
     },
     {
         "name": "Greek Salad",
@@ -125,7 +155,9 @@
         "category": "Salad",
         "price": 8.99,
         "quantity": 25,
-        "short-description": "A salad with feta cheese, olives, and cucumber."
+        "email":"khaledaferdous@gmail.com",
+        "origin":"USA",
+        "desc": "A salad with feta cheese, olives, and cucumber."
     },
     {
         "name": "California Roll",
@@ -133,7 +165,9 @@
         "category": "Sushi",
         "price": 11.99,
         "quantity": 33,
-        "short-description": "A sushi roll with crab meat, avocado, and cucumber."
+        "email":"khaledaferdous@gmail.com",
+        "origin":"USA",
+        "desc": "A sushi roll with crab meat, avocado, and cucumber."
     },
     {
         "name": "Fried Noodles",
@@ -141,7 +175,9 @@
         "category": "Rice",
         "price": 9.99,
         "quantity": 22,
-        "short-description": "Fried noodles with beef, egg, and vegetables."
+        "email":"khaledaferdous@gmail.com",
+        "origin":"USA",
+        "desc": "Fried noodles with beef, egg, and vegetables."
     },
     {
         "name": "Clam Chowder",
@@ -149,7 +185,9 @@
         "category": "Soup",
         "price": 6.99,
         "quantity": 20,
-        "short-description": "A creamy soup with clams and potatoes."
+        "email":"khaledaferdous@gmail.com",
+        "origin":"USA",
+        "desc": "A creamy soup with clams and potatoes."
     },
     {
         "name": "Apple Pie",
@@ -157,6 +195,8 @@
         "category": "Dessert",
         "price": 6.99,
         "quantity": 50,
-        "short-description": "A slice of apple pie with vanilla ice cream."
+        "email":"papiaferdous43@gmail.com",
+        "origin":"USA",
+        "desc": "A slice of apple pie with vanilla ice cream."
     }
 ]
