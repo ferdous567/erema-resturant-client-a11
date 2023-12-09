@@ -8,7 +8,13 @@
 * use framer motion
 * use vite for react
  
-
- assignment_category_0005
-## Name: Erema Resturant (Resturant service management)
- ## live site link: https://resturant-mgmt-f8dee.web.app/
+## Details this project
+- This projects has a navbar, a home page, login page, footer etc.
+- navbar includes home, blog, contact, login/logout.
+- In this home page has attractive banner, top food section, show all button, stat bar, and meet team.
+- when user logged in he/she can see food details page, and her profile page, this have add product page, all order page, delete add item etc.
+- The all food page have search bar, and implement pagination system.
+- User can order food via login. 
+ 
+## Project Name: Erema Resturant (Resturant service management)
+ ## live site link: https://vague-bikes.surge.sh/
